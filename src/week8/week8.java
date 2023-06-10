@@ -104,10 +104,18 @@ public class week8 {
 
     }
     public void counterGUI () {
+
         JButton counter = new JButton("Click me!");
+        JButton set = new JButton("Set Count");
         JLabel count = new JLabel(String.valueOf(0));
-        ActionListenerExample buttonListener = new ActionListenerExample(this.frame,count);
-        counter.addActionListener(buttonListener);
+        set.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        ActionListenerExample listener = new ActionListenerExample(this.frame, count);
+        counter.addActionListener(listener);
         this.panel.add(counter);
         this.panel.add(count);
         this.frame.pack();

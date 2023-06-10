@@ -1,6 +1,6 @@
 package week7;
 
-import org.jetbrains.annotations.Nullable;
+
 
 import java.io.*;
 import java.util.Scanner;
@@ -243,7 +243,7 @@ public class week7 {
             System.out.println("Something went wrong");
         }
     }
-    public static @Nullable String importDog() {
+    public static  String importDog() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("dog.txt"))) {
             Dog dog = (Dog) in.readObject();
             return dog.getName();
